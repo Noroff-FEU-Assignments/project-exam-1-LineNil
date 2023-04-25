@@ -1,0 +1,102 @@
+.hamburger {
+  position: absolute;
+  left: 330px;
+  padding: 20px 20px 0px 0px;
+}
+
+#hamburger-menu:checked ~ nav {
+  display: flex;
+  width: 100%;
+  padding-bottom: 40px;
+}
+
+nav, #hamburger-menu{
+  display: none;
+}
+
+.fa-bars{
+  font-size: 1.2em;
+}
+
+#hamburger-menu:checked ~ nav {
+  display: flex;
+  width: 100%;
+  padding-bottom: 40px;
+}
+
+nav, #hamburger-menu{
+  display: none;
+}
+
+nav {
+  display: none;
+  flex-direction: column;
+  list-style-type: none;
+  background-color: #f9f9f9f1;
+  justify-content: center;
+  gap: 20px;
+}
+
+nav a{
+  display: block;
+  color: rgb(0, 0, 0);
+  padding: 10px 20px;
+  text-align: center;
+  font-family: 'Nanum Gothic', sans-serif;
+}
+
+nav a:hover{
+  color: rgb(116, 116, 116);
+}
+
+nav li{
+  display: inline-block;
+  font-family: 'Nanum Gothic', sans-serif;
+}
+
+nav ul{
+  padding: 0px;
+  display: grid;
+}
+
+/*top bar*/
+
+.header{
+  display: flex;
+  justify-content: center;
+}
+
+.posts-link{
+  position: fixed;
+  left: 25px;
+  top: 25px;
+}
+
+.contact-about-link{
+  position: fixed;
+  right: 25px;
+  top: 25px;
+}
+
+a{
+  text-decoration: none;
+  color: black;
+}
+
+
+.active{
+  text-decoration: underline;
+}
+
+.heading{
+  font-family: 'Baskervville', serif;
+}
+
+.contact-about-link .posts-link{
+  font-family: 'Average', serif;
+}
+
+/*footer*/
+.subscribe{
+  background-image: url(../images/subscribe.jpg);
+}
