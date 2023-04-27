@@ -1,0 +1,33 @@
+.top-img{
+  background-image: url(../images/top-img.jpg);
+  background-repeat: no-repeat;
+  width: 100%;
+  filter: brightness(70%);
+  background-size: contain;
+  height: 521px;
+}
+
+.slogan{
+  font-size: 40px;
+  color: white;
+  bottom: 434px;
+  position: relative;
+  text-align: center;
+}
+
+.tip-button{
+color: white;
+font-family: 'Average', serif;
+font-size: 30px;
+background-color: transparent;
+position: relative;
+border: 3px solid white;
+padding: 10px 80px;
+left: 36%;
+bottom: 400px;
+}
+
+.tip-button:hover{
+  background-color: rgba(255, 255, 255, 0.37);
+  transition: 1s;
+}

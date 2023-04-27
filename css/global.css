@@ -42,7 +42,7 @@ nav a{
   color: rgb(0, 0, 0);
   padding: 10px 20px;
   text-align: center;
-  font-family: 'Nanum Gothic', sans-serif;
+  font-family: 'Average', serif;
 }
 
 nav a:hover{
@@ -61,21 +61,27 @@ nav ul{
 
 /*top bar*/
 
+body{
+  margin: 0px;
+}
+
 .header{
   display: flex;
   justify-content: center;
 }
 
 .posts-link{
-  position: fixed;
-  left: 25px;
+  position: relative;
+  left: -560px;
   top: 25px;
+  font-size: 20px;
 }
 
 .contact-about-link{
-  position: fixed;
-  right: 25px;
+  position: absolute;
   top: 25px;
+  right: -560px;
+  font-size: 20px;
 }
 
 a{
@@ -90,6 +96,8 @@ a{
 
 .heading{
   font-family: 'Baskervville', serif;
+  color: #715a30;
+  font-size: 40px;
 }
 
 .contact-about-link .posts-link{
@@ -102,6 +110,25 @@ a{
   filter: brightness(70%);
 }
 
+
+
+.links {
+  display: flex;
+  justify-content: space-around;
+  font-family: 'Average', serif;
+  font-size: 20px;
+  margin: -100px 100px 45px;
+}
+
+
+.copyright{
+  color: gray;
+  margin-left: 20px;
+}
+
+
+
+
 .subscribe{
   bottom: 380px;
   position: relative;
@@ -113,29 +140,46 @@ a{
 }
 #email{
   text-align: center;
-  bottom: 300px;
   position: relative;
   left: 33%;
   font-size: 40px;
   background-color: rgba(255,255,255,0.5);
-  border: 3px solid white;
+  border: 3px solid rgb(255, 255, 255);
 }
-
 ::placeholder{
   color: white;
   opacity: 1; 
   font-family: 'Average', serif;
   font-size: 30px;
 }
-
-.subscribe-button{
+.button-subscribe{
   color: white;
   font-family: 'Average', serif;
   font-size: 30px;
   background-color: transparent;
-  bottom: 220px;
+  bottom: 90px;
   position: relative;
-  left: 56px;
+  left: 498px;
   border: 3px solid white;
   padding: 10px 80px;
+}
+.button-subscribe:hover{
+  background-color: rgba(255, 255, 255, 0.37);
+  transition: 1s;
+}
+.form-error {
+  display: none;
+  color: rgb(0, 0, 0);
+  font-size: 1.2rem;
+  margin-top: 2px;
+  text-align: center;
+}
+.subscribeForm {
+  bottom: 200px;
+  position: relative;
+}
+
+.label-subscribe {
+  bottom: 130px;
+  position: relative;
 }

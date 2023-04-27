@@ -30,8 +30,8 @@
       ></label>
       <input class="checkbox" type="checkbox" id="hamburger-menu" />
       <nav>
-        <ul>
-          <li><a href="posts.html" class="posts-link">Posts</a></li>
+        <ul class="posts-link">
+          <li><a href="posts.html">Posts</a></li>
         </ul>
       </nav>
       <a href="index.html">
@@ -44,19 +44,41 @@
         </ul>
       </nav>
     </header>
-    <main></main>
+    <main>
+      <section class="top-section">
+        <div class="top-img"></div>
+        <p class="slogan">A new start with all the knowlege you need!</p>
+        <a href="postdetalj.html" class="tip-button">Tip of the week</a>
+      </section>
+      <section>
+        <p class="latest-posts">Latest posts</p>
+      </section>
+    </main>
     <footer>
       <div>
         <img class="subscribe-img" src="../images/subscribe.jpg" alt="" />
         <p class="subscribe">
           Subscribe to our newsletter and get a free consultation.
         </p>
-        <label>
-          <input name="email" id="email" placeholder="Email" />
-        </label>
-        <button class="subscribe-button">Subscribe</button>
+        <form class="subscribeForm">
+          <div>
+            <label class="label-subscribe">
+              <input name="email" id="email" placeholder="Email" />
+              <p class="form-error" id="emailError">
+                Please enter a valid email address
+              </p>
+            </label>
+          </div>
+          <button class="button-subscribe">Subscribe</button>
+        </form>
       </div>
-      <div class="links"></div>
+      <div class="links">
+        <a href="about.html">About</a>
+        <a href="contact.html">Contact</a>
+        <a href="posts.html">Posts/Blog</a>
+      </div>
+      <p class="copyright">Copyright &copy; 2023</p>
     </footer>
+    <script src="../js/global.js"></script>
   </body>
 </html>
