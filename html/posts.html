@@ -6,7 +6,7 @@
     <meta name="description" content="Design bla bla" />
     <title>Design | Home</title>
     <link href="../css/global.css" rel="stylesheet" />
-    <link href="../css/index.css" rel="stylesheet" />
+    <link href="../css/posts.css" rel="stylesheet" />
     <link href="../css/media.css" rel="stylesheet" />
     <link rel="preconnect" href="https://fonts.googleapis.com" />
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
@@ -44,7 +44,17 @@
         </ul>
       </nav>
     </header>
-    <main></main>
+    <main>
+      <section class="top-section">
+        <div class="top-img"></div>
+        <p class="theme">Posts</p>
+        <p class="slogan">
+          “Some times all you need is a litle bit of inspiration”
+        </p>
+      </section>
+      <section class="posts-list"></section>
+    </main>
+
     <footer>
       <div>
         <img class="subscribe-img" src="../images/subscribe.jpg" alt="" />
@@ -60,7 +70,7 @@
               </p>
             </label>
           </div>
-          <button>Subscribe</button>
+          <button class="button-subscribe">Subscribe</button>
         </form>
       </div>
       <div class="links">
@@ -70,6 +80,7 @@
       </div>
       <p class="copyright">Copyright &copy; 2023</p>
     </footer>
+    <script src="../js/posts.js"></script>
     <script src="../js/global.js"></script>
   </body>
 </html>

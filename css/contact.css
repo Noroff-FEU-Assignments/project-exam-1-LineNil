@@ -1,0 +1,86 @@
+
+.top-img{
+  background-image: url(../images/contact.jpg);
+  background-repeat: no-repeat;
+  width: 100%;
+  filter: brightness(70%);
+  background-size: contain;
+  height: 521px;
+}
+
+.contact-text{
+  font-size: 40px;
+  color: white;
+  bottom: 434px;
+  position: relative;
+  text-align: center;
+}
+
+.contact-info{
+  font-family: 'Average', serif;
+  top: 480px;
+  position: absolute;
+  margin-left: 35px;
+  font-size: 18px;
+}
+
+
+
+#contactForm {
+  padding: 2em;
+  }
+
+input {
+  width: 35%;
+  margin-top: 5px;
+  padding: 10px;
+  font-size: 16px;
+}
+button {
+  background: rgb(244, 244, 244);
+  border: solid 1px #a2a2a2;
+  width: 200px;
+  padding: 1rem;
+  color: black;
+  margin-top: 10px;
+  cursor: pointer;
+  border-radius: 0.2rem;
+}
+
+button:hover{
+  background-color: #d2d2d2;
+  transition: 1s;
+}
+
+button:active{
+  background-color: #d2d2d2;
+}
+
+
+
+label {
+  display: block;
+  margin-top: 1rem;
+  color: rgb(0, 0, 0);
+}
+
+label p{
+  font-size: 15px;
+}
+
+.form-error {
+  display: none;
+  color: red;
+  font-size: 0.9rem;
+  margin-top: 2px;
+}
+
+#message {
+  padding: 10px 50px 60px 10px;
+}
+
+  form button{
+    text-align: center;
+    position: relative;
+  }
+

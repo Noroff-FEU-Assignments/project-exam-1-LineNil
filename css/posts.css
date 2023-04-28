@@ -1,0 +1,37 @@
+.post-container {
+  width: 90%;
+}
+
+.post-img {
+  height: 325px;
+  width: 100%;
+}
+
+.posts-list {
+  display: grid;
+  grid-template-columns: repeat(4, minmax(0, 1fr));
+  margin-left: 40px;
+  top: -150px;
+  position: relative;
+}
+
+.top-img{
+  background-image: url(../images/posts.jpg);
+  background-repeat: no-repeat;
+  width: 100%;
+  filter: brightness(70%);
+  background-size: contain;
+  height: 627px;
+}
+
+.slogan, .theme{
+  font-size: 40px;
+  color: white;
+  bottom: 434px;
+  position: relative;
+  text-align: center;
+}
+
+.theme{
+  bottom:450px ;
+}
