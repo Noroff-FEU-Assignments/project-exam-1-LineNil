@@ -32,7 +32,7 @@ function createPost(result = {}){
 
   const postAnchorWrapper = document.createElement("a");
   postAnchorWrapper.classList.add("a-posts");
-  postAnchorWrapper.href = "posts.html?id=" + result.id;
+  postAnchorWrapper.href = "postdetalj.html?id=" + result.id;
   postsContainer.append(postAnchorWrapper);
 
   const postsDiv = document.createElement("div");
