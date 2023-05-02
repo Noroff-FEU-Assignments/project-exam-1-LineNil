@@ -29,6 +29,10 @@
 }
 
 @media (max-width:700px){
+
+  .top-img{
+    background-size: contain;
+  }
   .slogan, .theme {
     font-size: 30px;
     top: -639px;
@@ -106,6 +110,7 @@
 }
 
 .button-subscribe{
+  display: initial;
   font-size: 10px;
   bottom: 128px;
   left: 128px;
