@@ -1,0 +1,63 @@
+.top-img-about{
+  background-image: url(../images/about1.jpg);
+  background-repeat: no-repeat;
+  width: 100%;
+  filter: brightness(70%);
+  background-size: contain;
+  height: 458px;
+}
+
+.about-text {
+  font-size: 40px;
+  color: white;
+  bottom: 345px;
+  position: relative;
+  text-align: center;
+  font-style: italic;
+}
+
+.top-text-about {
+  text-align: center;
+  position: initial;
+  margin-top: -90px;
+  font-size: 40px;
+}
+
+.our-work-flex{
+  display: flex;
+  margin: 30px;
+  margin: 70px 30px;
+}
+
+.our-work-text{
+  width: 56%;
+  line-height: 1.4;
+}
+
+.our-work-text p{
+  margin: 0px;
+}
+
+.our-work-img{
+  width: 100%;
+  height: 265px;
+  margin-left: 65px;
+}
+
+.team-flex{
+  display: flex;
+  justify-content: space-around;
+  margin-bottom: 610px;
+  margin: 0px 30px 610px 30px;
+}
+
+.our-team-img {
+  display: flex;
+  width: 30%;
+  height: 100px;
+  flex-direction: column;
+}
+
+.name-color{
+  color: rgb(116, 116, 116);
+}

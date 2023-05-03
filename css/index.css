@@ -7,13 +7,18 @@
   height: 521px;
 }
 
-.slogan{
+
+
+
+.slogan-index{
   font-size: 40px;
   color: white;
   bottom: 434px;
   position: relative;
   text-align: center;
 }
+
+
 
 .tip-button{
 color: white;
@@ -31,3 +36,4 @@ bottom: 400px;
   background-color: rgba(255, 255, 255, 0.37);
   transition: 1s;
 }
+
