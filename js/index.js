@@ -1,10 +1,23 @@
 const postsUrl = "https://line-nilsen.no/wordpress/wp-json/wp/v2/posts?_embed";
 const postsContainer = document.querySelector(".latest-posts-carousel");
 
+const rightButton = document.querySelector(".next");
+
+const dynamicURLParam = "&page=";
+const fullURL = postsUrl + dynamicURLParam
+
+let pageCount = 1 
+
+async function nextPostsPage(){
+  pageCount++;
+  testFunction();
+}
+
+rightButton.addEventListener("click", nextPostsPage);
 
 
 async function CallPost(){
-  const response = await fetch(postsUrl);
+  const response = await fetch(fullURL + pageCount);
   const results = await response.json();
   return results;
 }

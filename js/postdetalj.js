@@ -64,3 +64,15 @@ async function createHTML(){
 }
 
 
+const img = document.querySelector("img");
+
+img.addEventListener('click', () => {
+  img.classList.add("bigger");
+});
+
+document.addEventListener('click', (event) => {
+  if (!event.target.closest("img")) {
+    img.classList.remove('bigger');
+  }
+});
+  
