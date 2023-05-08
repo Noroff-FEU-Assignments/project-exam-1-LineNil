@@ -171,4 +171,73 @@
   width: 100%;
 }
 
+.about-text{
+  bottom: 460px;
+  font-size: 30px;
+}
+.top-text-about{
+  bottom: 345px;
+  position: relative;
+}
+
+.our-work-flex{
+  margin: -345px 0px;
+  flex-direction: column;
+}
+
+.our-work-text{
+  width: 95%;
+  margin: 0px 15px 0px 15px;
+}
+
+.our-work-img{
+  height: 221px;
+  margin: 15px 0px;
+}
+
+.team-flex{
+  margin: 0px 0px 175px 0px;
+  flex-direction: column;
+  gap: 240px;
+}
+
+.our-team-img{
+  width: 100%;
+  margin-top: 365px;
+}
+
+.team-name {
+  margin-left: 15px;
+}
+.top-text-team{
+  top: 345px;
+  position: relative;
+  margin: 0px;
+}
+
+
+.about-images{
+  grid-template-columns: auto;
+  margin: 0px;
+  top: 440px;
+  position: relative;
+}
+
+.footer-about{
+  bottom: -485px;
+  position: relative;
+}
+
+.post-text {
+  font-size: 15px;
+  line-height: 1.5;
+  margin: 0px 25px;
+}
+
+.post-heading {
+  font-size: 25px;
+  margin: 0px 30px 0px 30px;
+}
+
+
 }

@@ -5,6 +5,7 @@
 .post-img {
   height: 325px;
   width: 100%;
+  object-fit: cover;
 }
 
 .posts-list {

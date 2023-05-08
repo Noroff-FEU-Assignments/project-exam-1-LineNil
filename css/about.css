@@ -47,7 +47,6 @@
 .team-flex{
   display: flex;
   justify-content: space-around;
-  margin-bottom: 610px;
   margin: 0px 30px 610px 30px;
 }
 
@@ -60,4 +59,24 @@
 
 .name-color{
   color: rgb(116, 116, 116);
+}
+
+.about-images{
+  display: grid;
+  grid-template-columns: repeat(4, minmax(0, 1fr));
+  gap: 23px;
+  margin: 20px;
+}
+
+.about-images div{
+  display: flex;
+  height: 440px;
+}
+
+.about-images div img{
+  width: 100%;
+}
+.top-text-team{
+  text-align: center;
+  font-size: 40px;
 }
