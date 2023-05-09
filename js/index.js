@@ -1,36 +1,57 @@
-const postsUrl = "https://line-nilsen.no/wordpress/wp-json/wp/v2/posts?_embed";
+const postsUrl = "https://line-nilsen.no/wordpress/wp-json/wp/v2/posts?_embed&per_page=4";
 const postsContainer = document.querySelector(".latest-posts-carousel");
 
 const rightButton = document.querySelector(".next");
+const leftButton = document.querySelector(".prev");
 
 const dynamicURLParam = "&page=";
 const fullURL = postsUrl + dynamicURLParam
 
 let pageCount = 1 
 
-async function nextPostsPage(){
+function nextPostsPage() {
   pageCount++;
-  testFunction();
+  setupCarousel(pageCount);
 }
 
 rightButton.addEventListener("click", nextPostsPage);
 
+let pageCountPrev = 0 
 
-async function CallPost(){
-  const response = await fetch(fullURL + pageCount);
-  const results = await response.json();
-  return results;
+function prevPostsPage() {
+  pageCountPrev++;
+  setupCarousel(pageCountPrev);
 }
 
-async function testFunction(){
-  const results = await CallPost();
-  for(let count = 0; count < results.length; count++){
-    createPost(results[count]);
-    if (count == 3) {
-      break;
-    }
+leftButton.addEventListener("click", prevPostsPage);
+
+
+const postsPerPage = 4;
+
+async function getPostsPage(pageNumber = 1) {
+  const url = fullURL + pageNumber;
+  const response = await fetch(url);
+  return await response.json();
+}
+
+function clearPosts() {
+  postsContainer.innerHTML = "";
+}
+
+async function setupCarousel(pageNumber = 1) {
+  const posts = await getPostsPage(pageNumber);
+
+  if (!posts.length) {
+    return alert("This page does not have any posts.")
+  }
+  clearPosts();
+  for (let i = 0; i < posts.length; i++) {
+    createPost(posts[i]);
   }
 }
+
+
+
 
 function createPost(result = {}){
   //showLoader();
@@ -55,14 +76,15 @@ function createPost(result = {}){
   postHeading.innerText = result.title.rendered;
   postsDiv.append(postHeading);
 
+ 
+
   postsContainer.appendChild(postAnchorWrapper);
 
   //hideLoader();
 };
 
-
-
-testFunction();
+setupCarousel();
+console.log(setupCarousel)
 
 
 /*function showLoader(){

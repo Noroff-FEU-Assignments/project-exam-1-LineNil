@@ -237,7 +237,27 @@
 .post-heading {
   font-size: 25px;
   margin: 0px 30px 0px 30px;
+  text-align: center;
 }
 
+
+/*index*/
+
+.prev,
+.next{
+  display: none;
+}
+
+.latest-posts-carousel {
+  grid-template-columns: auto;
+  margin: 0px;
+  top: -390px;
+  position: relative;
+}
+
+.latest-posts {
+  top: -385px;
+  font-size: 25px;
+}
 
 }
