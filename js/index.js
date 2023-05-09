@@ -16,11 +16,9 @@ function nextPostsPage() {
 
 rightButton.addEventListener("click", nextPostsPage);
 
-let pageCountPrev = 0 
-
 function prevPostsPage() {
-  pageCountPrev++;
-  setupCarousel(pageCountPrev);
+  pageCount--;
+  setupCarousel(pageCount);
 }
 
 leftButton.addEventListener("click", prevPostsPage);
