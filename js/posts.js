@@ -4,14 +4,7 @@ document.title = newPageTitle;
 const postsUrl = "https://line-nilsen.no/wordpress/wp-json/wp/v2/posts?_embed";
 const postsContainer = document.querySelector(".posts-list");
 
-/*function showLoader(){
-  loader.classList.remove("hidden")
-}
-
-function hideLoader(){
-  loader.classList.add("hidden")
-}
-*/
+let pageCount = 1;
 
 async function makeApiCall(){
   const response = await fetch(postsUrl);
@@ -28,8 +21,6 @@ async function generateHTML(){
 generateHTML();
 
 function createPost(result = {}){
-  //showLoader();
-
   const postAnchorWrapper = document.createElement("a");
   postAnchorWrapper.classList.add("a-posts");
   postAnchorWrapper.href = "postdetalj.html?id=" + result.id;
@@ -38,7 +29,6 @@ function createPost(result = {}){
   const postsDiv = document.createElement("div");
   postsDiv.classList.add("post-container");
   postAnchorWrapper.append(postsDiv);
-
 
   const postImg = document.createElement("img");
   postImg.classList.add("post-img");
@@ -49,11 +39,23 @@ function createPost(result = {}){
   postHeading.classList.add("post-heading");
   postHeading.innerText = result.title.rendered;
   postsDiv.append(postHeading);
-
-
-
-
-  postsContainer.appendChild(postAnchorWrapper);
-
-  //hideLoader();
 };
+
+const buttonLoad = document.querySelector(".load");
+
+buttonLoad.addEventListener("click", renderNextPage);
+
+async function renderNextPage() {
+  pageCount++;
+  const APIFetch = await generateHTML();
+  buttonLoad.style.display = "none";
+  createPost(APIFetch);
+
+}
+
+async function createMorePosts(){
+  const fetchAPI = await generateHTML();
+
+  createPost(fetchAPI);
+
+}

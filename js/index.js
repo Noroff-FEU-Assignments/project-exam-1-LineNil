@@ -15,13 +15,16 @@ function nextPostsPage() {
 }
 
 rightButton.addEventListener("click", nextPostsPage);
+console.log(pageCount)
 
 function prevPostsPage() {
   pageCount--;
   setupCarousel(pageCount);
 }
 
+
 leftButton.addEventListener("click", prevPostsPage);
+console.log(pageCount);
 
 
 const postsPerPage = 4;
