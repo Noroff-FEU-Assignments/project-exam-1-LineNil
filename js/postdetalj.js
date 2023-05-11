@@ -79,8 +79,7 @@ document.title = newPageTitle;
     modalImg.style.backgroundImage = `url(${result._embedded['wp:featuredmedia']['0'].source_url})`;
     modal.style.display = "flex";
   });
-
-  console.log(result._embedded['wp:featuredmedia']['0'].source_url)
+  
   
   modal.addEventListener("click", (event) => {
     if (event.target !== modalImg && !modalImg.contains(event.target)) {

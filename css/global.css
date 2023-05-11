@@ -1,30 +1,24 @@
+/*hamburger menu/menu*/
+
 .hamburger {
   position: absolute;
   left: 330px;
   padding: 20px 20px 0px 0px;
 }
-
-
 nav, #hamburger-menu{
   display: none;
 }
-
 .fa-bars{
   font-size: 1.2em;
 }
-
 #hamburger-menu:checked ~ nav {
   display: flex;
   width: 100%;
   padding-bottom: 40px;
 }
-
-
-
 nav, #hamburger-menu{
   display: none;
 }
-
 nav {
   display: none;
   flex-direction: column;
@@ -32,7 +26,6 @@ nav {
   justify-content: center;
   gap: 20px;
 }
-
 nav a{
   display: block;
   color: rgb(0, 0, 0);
@@ -40,62 +33,52 @@ nav a{
   text-align: center;
   font-family: 'Average', serif;
 }
-
 nav a:hover{
   color: rgb(116, 116, 116);
 }
-
 nav li{
   display: inline-block;
   font-family: 'Nanum Gothic', sans-serif;
 }
-
 nav ul{
   padding: 0px;
   display: grid;
 }
+
 
 /*top bar*/
 
 body{
   margin: 0px;
 }
-
 .header{
   display: flex;
   justify-content: center;
 }
-
 .posts-link{
   position: relative;
   left: -560px;
   top: 25px;
   font-size: 20px;
 }
-
 .contact-about-link{
   position: absolute;
   top: 25px;
   left: 320px;
   font-size: 17px;
 }
-
 a{
   text-decoration: none;
   color: black;
 }
-
-
 .active{
   text-decoration: underline;
 }
-
 .heading{
   font-family: 'Baskervville', serif;
   color: #715a30;
   font-size: 40px;
 }
-
 .contact-about-link .posts-link{
   font-family: 'Average', serif;
 }
@@ -103,7 +86,6 @@ a{
 /*footer*/
 .subscribe-img{
   width: 100%;
-  filter: brightness(70%);
 }
 
 
@@ -114,6 +96,10 @@ a{
   font-family: 'Average', serif;
   font-size: 20px;
   margin: -100px 100px 45px;
+}
+
+.links :hover{
+  color: rgb(116, 116, 116);
 }
 
 
