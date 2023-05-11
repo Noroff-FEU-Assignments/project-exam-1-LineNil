@@ -16,15 +16,12 @@ function hideLoader(){
 */
 
 
-
 async function fetchPost(){
 
   const response = await fetch(postsUrl);  
   return await response.json();
 
 }
-
-
 
 
 async function createHTML(){
@@ -38,11 +35,9 @@ document.title = newPageTitle;
 
   const productWrapper = document.createElement("section");
 
-
   const postDiv = document.createElement("div");
   postDiv.classList.add("post-container");
   productWrapper.append(postDiv);
-
 
   const postImg = document.createElement("img");
   postImg.classList.add("post-img");
@@ -63,9 +58,6 @@ document.title = newPageTitle;
   postDiv.append(postHeading);
   console.log(postHeading);
 
-
-
-
   const postText = document.createElement("p");
   postText.classList.add("post-text");
   postText.innerText = result.content.rendered.replace(/<\/?[^>]+(>|$)/g, "");;
@@ -79,7 +71,6 @@ document.title = newPageTitle;
     modalImg.style.backgroundImage = `url(${result._embedded['wp:featuredmedia']['0'].source_url})`;
     modal.style.display = "flex";
   });
-  
   
   modal.addEventListener("click", (event) => {
     if (event.target !== modalImg && !modalImg.contains(event.target)) {

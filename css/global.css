@@ -87,9 +87,6 @@ a{
 .subscribe-img{
   width: 100%;
 }
-
-
-
 .links {
   display: flex;
   justify-content: space-around;
@@ -97,20 +94,13 @@ a{
   font-size: 20px;
   margin: -100px 100px 45px;
 }
-
 .links :hover{
   color: rgb(116, 116, 116);
 }
-
-
 .copyright{
   color: gray;
   margin-left: 20px;
 }
-
-
-
-
 .subscribe{
   bottom: 380px;
   position: relative;
@@ -121,9 +111,6 @@ a{
   justify-content: center;
   display: grid;
 }
-
-
-
 #email{
   text-align: center;
   position: relative;
@@ -137,9 +124,6 @@ a{
   font-family: 'Average', serif;
   font-size: 30px;
 }
-
-
-
 .button-subscribe{
   display: flex;
   margin: 0px auto;

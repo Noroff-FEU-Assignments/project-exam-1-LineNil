@@ -85,7 +85,7 @@ function createPost(result = {}){
 };
 
 setupCarousel();
-console.log(setupCarousel)
+
 
 
 /*function showLoader(){

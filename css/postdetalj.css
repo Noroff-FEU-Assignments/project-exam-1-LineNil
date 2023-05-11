@@ -1,26 +1,21 @@
-
-
 .post-img{
   width: 100%;
   height: 500px;
   object-fit: cover;
 }
-
-
 .post-heading {
   justify-content: center;
   display: grid;
   font-size: 50px;
   margin: 40px 135px 20px 135px;
 }
-
 .post-text {
   margin: 40px 230px;
   font-size: 19px;
   line-height: 1.5;
 }
 
-
+/*img modal*/
 .divModal {
   position: fixed;
   top: 0;
@@ -33,7 +28,6 @@
   background-color: rgba(0, 0, 0, 0.8);
   z-index: 999;
 }
-
 .modal-img {
   background-size: contain;
   background-repeat: no-repeat;

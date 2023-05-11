@@ -35,10 +35,17 @@
  .top-img{
     background-size: contain;
     height: 135px;
+width: 100%;
+  }
+
+  .top-img-posts{
+    background-size: contain;
+    height: 184px;
+    width: 100%;
   }
   .slogan, .theme {
     font-size: 30px;
-    top: -639px;
+    top: 10%;
   }
   .heading{
     font-size: 25px;
@@ -105,9 +112,9 @@ left: 15%;
 /*Posts*/
 
   .posts-list{
-    top: -600px;
     display: block;
     margin: 0px;
+    margin: 60px 0px;
   }
   .post-container {
   
@@ -233,7 +240,7 @@ left: 15%;
 .post-text {
   font-size: 15px;
   line-height: 1.5;
-  margin: 0px 25px;
+  margin: 30px 25px;
 }
 .post-heading {
   font-size: 25px;
