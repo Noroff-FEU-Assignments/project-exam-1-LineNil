@@ -16,20 +16,25 @@ function hideLoader(){
 */
 
 
+
 async function fetchPost(){
 
   const response = await fetch(postsUrl);  
   return await response.json();
 
 }
-createHTML();
+
+
+
 
 async function createHTML(){
+  const result = await fetchPost();
+const newPageTitle = 'Blog |' + result.title.rendered;
+document.title = newPageTitle; 
   //showLoader();
-  const result = await fetchPost() 
   
   //hideLoader();
-
+  
 
   const productWrapper = document.createElement("section");
 
@@ -43,6 +48,14 @@ async function createHTML(){
   postImg.classList.add("post-img");
   postImg.src = result._embedded['wp:featuredmedia']['0'].source_url;
   postDiv.append(postImg); 
+
+  const modal = document.createElement("div");
+  modal.classList.add("divModal");
+  postDiv.append(modal);
+
+  const modalImg = document.createElement("div");
+  modalImg.classList.add("modal-img");
+  modal.append(modalImg);
 
   const postHeading = document.createElement ("h1");
   postHeading.classList.add("post-heading");
@@ -61,18 +74,19 @@ async function createHTML(){
 
 
   postContainer.appendChild(productWrapper);
+
+  postImg.addEventListener("click", () => {
+    modalImg.style.backgroundImage = `url(${result._embedded['wp:featuredmedia']['0'].source_url})`;
+    modal.style.display = "flex";
+  });
+
+  console.log(result._embedded['wp:featuredmedia']['0'].source_url)
+  
+  modal.addEventListener("click", (event) => {
+    if (event.target !== modalImg && !modalImg.contains(event.target)) {
+      modal.style.display = "none";
+    }
+  });
 }
 
-
-const img = document.querySelector("img");
-
-img.addEventListener('click', () => {
-  img.classList.add("bigger");
-});
-
-document.addEventListener('click', (event) => {
-  if (!event.target.closest("img")) {
-    img.classList.remove('bigger');
-  }
-});
-  
+createHTML();

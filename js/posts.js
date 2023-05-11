@@ -4,8 +4,6 @@ document.title = newPageTitle;
 const postsUrl = "https://line-nilsen.no/wordpress/wp-json/wp/v2/posts?_embed";
 const postsContainer = document.querySelector(".posts-list");
 
-let pageCount = 1;
-
 async function makeApiCall(){
   const response = await fetch(postsUrl);
   return await response.json();
@@ -42,20 +40,18 @@ function createPost(result = {}){
 };
 
 const buttonLoad = document.querySelector(".load");
+let pageCount = 1;
 
 buttonLoad.addEventListener("click", renderNextPage);
 
 async function renderNextPage() {
   pageCount++;
-  const APIFetch = await generateHTML();
-  buttonLoad.style.display = "none";
-  createPost(APIFetch);
-
-}
-
-async function createMorePosts(){
-  const fetchAPI = await generateHTML();
-
-  createPost(fetchAPI);
-
+  const response = await fetch(`${postsUrl}&page=${pageCount}`);
+  const results = await response.json();
+  results.forEach((result) => {
+    createPost(result);
+  });
+  if (results.length === 0) {
+    buttonLoad.style.display = "none";
+  }
 }

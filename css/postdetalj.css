@@ -1,12 +1,11 @@
+
+
 .post-img{
   width: 100%;
   height: 500px;
   object-fit: cover;
 }
 
-.post-container{
-
-}
 
 .post-heading {
   justify-content: center;
@@ -21,8 +20,24 @@
   line-height: 1.5;
 }
 
-.bigger {
-  transform: scale(1.5);
-  box-shadow: 0 0 20px rgba(0,0,0,0.5);
-  z-index: 1;
+
+.divModal {
+  position: fixed;
+  top: 0;
+  left: 0;
+  display: none;
+  justify-content: center;
+  align-items: center;
+  width: 100%;
+  height: 100%;
+  background-color: rgba(0, 0, 0, 0.8);
+  z-index: 999;
+}
+
+.modal-img {
+  background-size: contain;
+  background-repeat: no-repeat;
+  background-position: center;
+  width: 30%;
+  height: 80%;
 }

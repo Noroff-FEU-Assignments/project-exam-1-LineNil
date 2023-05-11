@@ -75,11 +75,6 @@
       margin-left: 0px;
   
   }
-
-  .post-img {
-    height: 100%;
-  }
-
   .a-posts{
     width: 100%;
   }
@@ -167,7 +162,7 @@
 }
 
 #contactForm {
-  margin-top: -460px;
+  margin-top: -250px;
   width: 100%;
 }
 
@@ -236,7 +231,7 @@
 
 .post-heading {
   font-size: 25px;
-  margin: 0px 30px 0px 30px;
+  margin: 15px 30px 0px 30px;
   text-align: center;
 }
 
