@@ -15,7 +15,6 @@ function nextPostsPage() {
 }
 
 rightButton.addEventListener("click", nextPostsPage);
-console.log(pageCount)
 
 function prevPostsPage() {
   pageCount--;
@@ -24,15 +23,19 @@ function prevPostsPage() {
 
 
 leftButton.addEventListener("click", prevPostsPage);
-console.log(pageCount);
 
 
 const postsPerPage = 4;
 
 async function getPostsPage(pageNumber = 1) {
   const url = fullURL + pageNumber;
-  const response = await fetch(url);
-  return await response.json();
+  try{
+    const response = await fetch(url);
+    return await response.json();
+  } catch (error){
+    console.log("Error fetching posts:", error);
+    alert("An error occurred. Please try again later.");
+  }
 }
 
 function clearPosts() {
@@ -55,7 +58,6 @@ async function setupCarousel(pageNumber = 1) {
 
 
 function createPost(result = {}){
-  //showLoader();
 
   const postAnchorWrapper = document.createElement("a");
   postAnchorWrapper.classList.add("a-posts");
@@ -77,22 +79,8 @@ function createPost(result = {}){
   postHeading.innerText = result.title.rendered;
   postsDiv.append(postHeading);
 
- 
-
   postsContainer.appendChild(postAnchorWrapper);
-
-  //hideLoader();
 };
 
 setupCarousel();
 
-
-
-/*function showLoader(){
-  loader.classList.remove("hidden")
-}
-
-function hideLoader(){
-  loader.classList.add("hidden")
-}
-*/

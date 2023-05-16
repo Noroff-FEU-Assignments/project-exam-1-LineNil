@@ -85,14 +85,18 @@ a{
 
 /*footer*/
 .subscribe-img{
+  background-image: url(../images/subscribe.png);
+  background-repeat: no-repeat;
   width: 100%;
+  background-size: cover;
+  height: 458px;
 }
 .links {
   display: flex;
   justify-content: space-around;
   font-family: 'Average', serif;
   font-size: 20px;
-  margin: -100px 100px 45px;
+  margin-top: 50px;
 }
 .links :hover{
   color: rgb(116, 116, 116);
@@ -102,7 +106,7 @@ a{
   margin-left: 20px;
 }
 .subscribe{
-  bottom: 380px;
+  top: 20%;
   position: relative;
   color: white;
   font-size: 40px;
@@ -125,14 +129,14 @@ a{
   font-size: 30px;
 }
 .button-subscribe{
+  position: relative;
+  top: 110%;
   display: flex;
   margin: 0px auto;
   color: white;
   font-family: 'Average', serif;
   font-size: 30px;
   background-color: transparent;
-  bottom: 90px;
-  position: relative;
   border: 3px solid white;
   padding: 10px 80px;
 }
@@ -146,16 +150,16 @@ a{
   font-size: 1.2rem;
   margin-top: 2px;
   text-align: center;
-  margin-bottom: -11px;
+  margin: 0px;
 }
 .subscribeForm {
-  bottom: 200px;
   position: relative;
+  top: 30%;
+  gap: 0px;
+  display: grid;
 }
 
 .label-subscribe {
-  bottom: 130px;
-  position: relative;
   display: grid;
 justify-content: center;
 }

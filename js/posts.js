@@ -5,8 +5,14 @@ const postsUrl = "https://line-nilsen.no/wordpress/wp-json/wp/v2/posts?_embed";
 const postsContainer = document.querySelector(".posts-list");
 
 async function makeApiCall(){
-  const response = await fetch(postsUrl);
-  return await response.json();
+  try{
+    const response = await fetch(postsUrl);
+    return await response.json();
+  } catch (error){
+    console.log("Error fetching posts:", error);
+    alert("An error occurred. Please try again later.");
+  }
+
 }
 
 async function generateHTML(){

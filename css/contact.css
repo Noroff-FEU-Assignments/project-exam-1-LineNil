@@ -1,25 +1,23 @@
 
-.top-img{
+.top-img-contact{
   background-image: url(../images/contact.jpg);
   background-repeat: no-repeat;
   width: 100%;
-  filter: brightness(70%);
   background-size: contain;
-  height: 521px;
-}
+  height: 390px;}
 
 .contact-text{
-  font-size: 40px;
+  font-size: 45px;
   color: white;
-  bottom: 434px;
   position: relative;
   text-align: center;
+  top: 25%;
 }
 
 .contact-info{
   font-family: 'Average', serif;
-  top: -230px;
-  position: relative;
+top: -10%;  
+position: relative;
   margin-left: 35px;
   font-size: 18px;
 }
@@ -31,8 +29,7 @@
 
 #contactForm {
   padding: 2em;
-  margin-top: -215px;
-  width: 50%;
+    width: 50%;
   }
 
 .input-contact {
@@ -43,7 +40,6 @@
 }
 .contact-img-hand {
   width: 50%;
-  margin-top: -150px;
 }
 
 .img-hand {
@@ -55,26 +51,23 @@
 
 }
 .button-submit {
-
-  border: solid 1px #a2a2a2;
-  width: 200px;
-  padding: 1rem;
-  color: black;
-  margin-top: 45px;
-  cursor: pointer;
-  border-radius: 0.2rem;
+  color: #715a30;
+  font-family: 'Average', serif;
+  font-size: 25px;
+  background-color: transparent;
+  border: 3px solid #715a30;
+  padding: 10px 70px;
+  margin-top: 50px;
 }
 
 button:hover{
-  background-color: #d2d2d2;
-  transition: 1s;
+    background-color: #715a3042;
+    transition: 1s ease;
 }
 
 button:active{
   background-color: #d2d2d2;
 }
-
-
 
 label {
   display: block;

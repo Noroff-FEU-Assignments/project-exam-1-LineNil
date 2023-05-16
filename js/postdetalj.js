@@ -3,34 +3,22 @@ const params = new URLSearchParams(queryString);
 const id = params.get("id");
 const postsUrl = `https://line-nilsen.no/wordpress/wp-json/wp/v2/posts/${id}?_embed`;
 const postContainer = document.querySelector(".postContainer");
-//const loader = document.querySelector(".loader");
-
-
-/*function showLoader(){
-  loader.classList.remove("hidden")
-}
-
-function hideLoader(){
-  loader.classList.add("hidden")
-}
-*/
-
 
 async function fetchPost(){
-
+ try{
   const response = await fetch(postsUrl);  
   return await response.json();
-
+ } catch (error){
+   console.log("Error fetching posts:", error);
+   alert("An error occurred. Please try again later.");
+ }
 }
-
 
 async function createHTML(){
   const result = await fetchPost();
 const newPageTitle = 'Blog |' + result.title.rendered;
 document.title = newPageTitle; 
-  //showLoader();
-  
-  //hideLoader();
+
   
 
   const productWrapper = document.createElement("section");
