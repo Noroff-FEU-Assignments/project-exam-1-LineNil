@@ -5,7 +5,7 @@
   background-image: url(../images/index-top-img.png);
   background-repeat: no-repeat;
   width: 100%;
-  background-size: contain;
+  background-size: cover;
   height: 521px;
 }
 .slogan-index{

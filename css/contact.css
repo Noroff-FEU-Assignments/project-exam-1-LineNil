@@ -3,8 +3,9 @@
   background-image: url(../images/contact.jpg);
   background-repeat: no-repeat;
   width: 100%;
-  background-size: contain;
-  height: 390px;}
+  background-size: cover;
+  height: 235px;
+}
 
 .contact-text{
   font-size: 45px;
@@ -16,7 +17,6 @@
 
 .contact-info{
   font-family: 'Average', serif;
-top: -10%;  
 position: relative;
   margin-left: 35px;
   font-size: 18px;
