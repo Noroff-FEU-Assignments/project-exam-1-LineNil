@@ -9,7 +9,13 @@ nav, #hamburger-menu{
   display: none;
 }
 .fa-bars{
-  font-size: 1.2em;
+ font-size: 1.2em;
+ font-weight:900;
+ font-size: 25px;
+ color: #745c31;
+}
+.fa-bars:active{
+  color: #745d31be;
 }
 #hamburger-menu:checked ~ nav {
   display: flex;
