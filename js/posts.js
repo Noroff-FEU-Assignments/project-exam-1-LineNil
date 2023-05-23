@@ -37,6 +37,7 @@ function createPost(result = {}){
   const postImg = document.createElement("img");
   postImg.classList.add("post-img");
   postImg.src = result._embedded['wp:featuredmedia']['0'].source_url;
+  postImg.alt = "Image for post: " + result.title.rendered;
   postsDiv.append(postImg);
 
   const postHeading = document.createElement ("h1");
