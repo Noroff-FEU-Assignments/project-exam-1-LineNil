@@ -35,7 +35,7 @@
 
 /*load button*/
 .load {
-  display: flex;
+  /* display: flex; */
   margin: 0px auto;
   color: #715a30;
   font-family: 'Average', serif;
